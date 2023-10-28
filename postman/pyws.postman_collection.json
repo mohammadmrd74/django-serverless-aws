@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "60a314ba-0376-452f-a29f-f239831f6b14",
+		"name": "pyws",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5877241"
+	},
+	"item": [
+		{
+			"name": "add device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"/devices/id2\",\n    \"deviceModel\": \"/devicemodels/id1\",\n    \"name\": \"sensor\",\n    \"note\": \"Testing a sensor.\",\n    \"serial\": \"A020000102\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws_gateway}}/api/devices",
+					"protocol": "https",
+					"host": [
+						"m2drawmwo2",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"devices"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add device",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"/devices/id2\",\n    \"deviceModel\": \"/devicemodels/id1\",\n    \"name\": \"sensor\",\n    \"note\": \"Testing a sensor.\",\n    \"serial\": \"A020000102\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{aws_gateway}}/api/devices",
+							"protocol": "https",
+							"host": [
+								"m2drawmwo2",
+								"execute-api",
+								"eu-north-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"devices"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 17 Oct 2023 13:30:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "DENY"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "M8rjViH0gi0EJpA="
+						}
+					],
+					"cookie": [],
+					"body": "\"Duplicate item. Insertion aborted.\""
+				}
+			]
+		},
+		{
+			"name": "get device",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"/devices/id1\",\n    \"deviceModel\": \"/devicemodels/id1\",\n    \"note\": \"Testing a sensor.\",\n    \"serial\": \"A020000102\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aws_gateway}}/api/devices/id1",
+					"protocol": "https",
+					"host": [
+						"m2drawmwo2",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"devices",
+						"id1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get device",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"/devices/id1\",\n    \"deviceModel\": \"/devicemodels/id1\",\n    \"note\": \"Testing a sensor.\",\n    \"serial\": \"A020000102\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{aws_gateway}}/api/devices/id2",
+							"protocol": "https",
+							"host": [
+								"m2drawmwo2",
+								"execute-api",
+								"eu-north-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"devices",
+								"id2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 17 Oct 2023 13:30:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "117"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "DENY"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "M8rk2hp1gi0EJKQ="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"deviceModel\": \"/devicemodels/id1\",\n    \"note\": \"Testing a sensor.\",\n    \"id\": \"/devices/id2\",\n    \"name\": \"321\",\n    \"serial\": \"A020000102\"\n}"
+				}
+			]
+		}
+	]
+}

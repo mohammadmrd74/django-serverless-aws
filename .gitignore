@@ -1,0 +1,62 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Secret key
+*.key
+
+# Database
+db.sqlite3
+
+# Static files
+/static/
+*.log
+
+# Media files
+/media/
+*.log
+
+# Configuration files
+*.settings
+
+# Local development settings
+settings_local.py
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.pycharm
+*.pyc
+
+# Dependency directories
+lib/
+bin/
+include/
+lib64/
+share/
+local/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.mo
+*.pot
+
+# Ignore test database
+test_*.db
+
+# Ignore any .gitignore files
+!.gitignore
+
+node_modules/
+
+.serverless
+
+package-lock.json
